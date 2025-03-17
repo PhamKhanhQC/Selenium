@@ -5,7 +5,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class EdgeiTest {
+public class EdgeTest {
     @Test
     void openBrowserWithDefaultMode(){
         WebDriver driver = new EdgeDriver();
