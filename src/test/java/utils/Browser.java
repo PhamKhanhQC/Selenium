@@ -13,7 +13,7 @@ import java.time.Duration;
 
 // selenium owner methods
 public class Browser {
-    private static WebDriver driver;
+    public static WebDriver driver;
     public static WebDriverWait wait;
     /*
      open browser: chrome, firefox, edge, safari

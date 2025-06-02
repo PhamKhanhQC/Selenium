@@ -1,7 +1,7 @@
 package herokuApp;
 
 public class Person {
-    private String firstName, lastname;
+    private String firstName,lastname;
     private double due;
 
     public Person(String firstName, String lastname, double due) {
@@ -11,14 +11,12 @@ public class Person {
     }
 
 
-    public void info() {
-        System.out.printf("First name: %s ,last name: %s, due: %.2f%n", firstName, lastname, due);
+    public void info(){
+        System.out.printf("First name: %s ,last name: %s, due: %.2f%n", firstName,lastname,due);
     }
-
     public double getDue() {
         return due;
     }
-
     public String getFullName() {
         return String.format("%s %s", firstName, lastname);
     }
