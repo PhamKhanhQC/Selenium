@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,8 @@ public class BrokenImageTest {
 
     @Test
     void verifyBrokenImage(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/broken_images");
         List<WebElement> images = driver.findElements(By.cssSelector(".example img"));
