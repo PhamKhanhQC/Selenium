@@ -12,10 +12,10 @@ public class CheckboxesTest {
     @Test
     void tc02() throws InterruptedException {
         Browser.openBrowser("chrome");
-        Browser.wait
-                .until(driver -> driver.getCurrentUrl().contains("checkboxes"));
+
         CheckboxesPage checkboxesPage = new CheckboxesPage();
         checkboxesPage.open();
+        Thread.sleep(5000);
         checkboxesPage.check("1");
         Assert.assertTrue(checkboxesPage.isChecked("1"), "Checkbox 1 is not checked");
         checkboxesPage.check("2");

@@ -21,6 +21,7 @@ public class HyperLinkTest {
         // click link status code 200
         // <a href="status_codes/200">200</a>
         driver.findElement(By.xpath("//a[@href='status_codes/200']")).click();
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("content"))));
         driver.findElement(By.xpath("//a[.='200']/@href")).click();
 
         String href = driver.findElement(By.linkText("200")).getDomAttribute("href");
