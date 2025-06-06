@@ -18,6 +18,7 @@ public class NestedFrameTest {
         Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/nested_frames");
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(d -> d.findElement(By.xpath("//h3")).isDisplayed());
         driver.switchTo().frame("frame-top");
         driver.switchTo().frame("frame-left");
         Assert.assertTrue(driver.findElement(By.xpath("//body")).getText().contains("LEFT"));
