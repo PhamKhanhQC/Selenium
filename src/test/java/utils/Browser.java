@@ -22,16 +22,13 @@ public class Browser {
      static method
      */
 
-    public static void chromeOption() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");  // Chrome 109+
-        options.addArguments("--disable-gpu");
-    }
-
     public static void openBrowser(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--headless=new");
+                options.addArguments("--disable-gpu");
+                driver = new ChromeDriver(options);
                 break;
             case "firefox":
                 driver = new FirefoxDriver();

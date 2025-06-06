@@ -12,7 +12,6 @@ public class CheckboxesTest {
     @Test
     void tc02() throws InterruptedException {
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         CheckboxesPage checkboxesPage = new CheckboxesPage();
         checkboxesPage.open();
         checkboxesPage.check("1");

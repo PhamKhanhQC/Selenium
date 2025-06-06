@@ -20,7 +20,6 @@ public class DynamicLoadingTest {
     @Test
     void waitForResult(){
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
         driver.findElement(By.cssSelector("#start button")).click();
 
@@ -37,7 +36,6 @@ public class DynamicLoadingTest {
     @Test
     void captureScreenShot(){
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         driver.get("https://the-internet.herokuapp.com/context_menu");
 
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;

@@ -17,7 +17,6 @@ public class FormAuthenticationTest {
     @BeforeMethod
     void setup() {
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         formAuthenticationPage = new FormAuthenticationPage();
     }
 

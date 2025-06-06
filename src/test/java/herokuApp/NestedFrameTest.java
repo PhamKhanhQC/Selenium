@@ -16,7 +16,6 @@ public class NestedFrameTest {
     @Test
     void tc06() {
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         driver.get("https://the-internet.herokuapp.com/nested_frames");
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.switchTo().frame("frame-top");

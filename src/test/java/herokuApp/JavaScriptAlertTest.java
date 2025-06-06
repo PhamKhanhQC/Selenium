@@ -15,7 +15,6 @@ public class JavaScriptAlertTest {
     @Test
     void t07(){
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();

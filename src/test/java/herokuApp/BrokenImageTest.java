@@ -15,7 +15,6 @@ public class BrokenImageTest {
     @Test
     void verifyBrokenImage(){
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         driver.get("https://the-internet.herokuapp.com/broken_images");
         List<WebElement> images = driver.findElements(By.cssSelector(".example img"));
         images.forEach(image -> {

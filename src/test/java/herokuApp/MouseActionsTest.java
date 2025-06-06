@@ -22,7 +22,6 @@ public class MouseActionsTest {
     @Test
     void hoverTest() {
         Browser.openBrowser("chrome");
-        Browser.chromeOption();
         driver.get("https://the-internet.herokuapp.com/hovers");
 
         Actions action = new Actions(driver);
@@ -36,9 +35,7 @@ public class MouseActionsTest {
 
     @Test
     void dragAndDropTest() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/drag_and_drop");
 
         Actions action = new Actions(driver);
@@ -56,9 +53,7 @@ public class MouseActionsTest {
 
     @Test
     void horizontalSliderTest() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/horizontal_slider");
 
         Actions action = new Actions(driver);
@@ -73,9 +68,7 @@ public class MouseActionsTest {
 
     @Test
     void infiniteScrollTest() throws InterruptedException {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/infinite_scroll");
 
         Actions action = new Actions(driver);
@@ -88,9 +81,7 @@ public class MouseActionsTest {
 
     @Test
     void contextMenuTest() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/context_menu");
 
         Actions action = new Actions(driver);
@@ -106,9 +97,7 @@ public class MouseActionsTest {
 
     @Test
     void keyPressTest() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/key_presses");
 
         Actions action = new Actions(driver);
@@ -122,9 +111,7 @@ public class MouseActionsTest {
 
     @Test
     void verifyDynamicLoading() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 
         driver.findElement(By.xpath("//button[.='Start']")).click();
@@ -136,9 +123,7 @@ public class MouseActionsTest {
 
     @Test
     void captureScreenShot() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://the-internet.herokuapp.com/context_menu");
 
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
