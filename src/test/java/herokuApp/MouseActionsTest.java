@@ -9,18 +9,20 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.Browser;
 
 
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
+import static utils.Browser.driver;
+
 public class MouseActionsTest {
     @Test
     void hoverTest() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
+        Browser.chromeOption();
         driver.get("https://the-internet.herokuapp.com/hovers");
 
         Actions action = new Actions(driver);

@@ -1,6 +1,5 @@
 package herokuApp;
 
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.heroku.CheckboxesPage;
@@ -12,9 +11,8 @@ import static utils.Browser.quit;
 public class CheckboxesTest {
     @Test
     void tc02() throws InterruptedException {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
         Browser.openBrowser("chrome");
+        Browser.chromeOption();
         CheckboxesPage checkboxesPage = new CheckboxesPage();
         checkboxesPage.open();
         checkboxesPage.check("1");

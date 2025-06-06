@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -20,6 +21,13 @@ public class Browser {
      return WebDriver
      static method
      */
+
+    public static void chromeOption() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless=new");  // Chrome 109+
+        options.addArguments("--disable-gpu");
+    }
+
     public static void openBrowser(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":

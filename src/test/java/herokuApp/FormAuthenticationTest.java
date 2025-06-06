@@ -1,23 +1,23 @@
 package herokuApp;
 
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.heroku.FormAuthenticationPage;
+import utils.Browser;
 
-import static utils.Browser.*;
+import static utils.Browser.getCurrentUrl;
+import static utils.Browser.quit;
 
 public class FormAuthenticationTest {
     FormAuthenticationPage formAuthenticationPage;
 
     @BeforeMethod
     void setup() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--user-data-dir=" + System.getProperty("java.io.tmpdir") + "/chromeProfile");
-        openBrowser("chrome");
+        Browser.openBrowser("chrome");
+        Browser.chromeOption();
         formAuthenticationPage = new FormAuthenticationPage();
     }
 
