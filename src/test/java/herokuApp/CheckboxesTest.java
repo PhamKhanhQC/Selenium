@@ -12,6 +12,8 @@ public class CheckboxesTest {
     @Test
     void tc02() throws InterruptedException {
         Browser.openBrowser("chrome");
+        Browser.wait
+                .until(driver -> driver.getCurrentUrl().contains("checkboxes"));
         CheckboxesPage checkboxesPage = new CheckboxesPage();
         checkboxesPage.open();
         checkboxesPage.check("1");

@@ -12,12 +12,12 @@ import java.time.Duration;
 import static utils.Browser.driver;
 
 public class HyperLinkTest {
-   @Test
+    @Test
     void verifyAbleNavigateHyperlink() {
-    Browser.openBrowser("chrome");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Browser.openBrowser("chrome");
 
         driver.get("https://the-internet.herokuapp.com/status_codes");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         // click link status code 200
         // <a href="status_codes/200">200</a>
         driver.findElement(By.xpath("//a[@href='status_codes/200']")).click();

@@ -14,16 +14,19 @@ import org.openqa.selenium.devtools.v133.performance.Performance;
 import org.openqa.selenium.devtools.v133.performance.model.Metric;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.Browser;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import static utils.Browser.driver;
+
 public class ChromeTest {
     @Test
     void openWithDefaultMode() {
-        WebDriver driver = new ChromeDriver();
+        Browser.openBrowser("chrome");
         driver.get("https://www.selenium.dev/");
         Assert.assertEquals(driver.getTitle(), "Selenium");
         driver.quit();
@@ -31,10 +34,7 @@ public class ChromeTest {
 
     @Test
     void openBrowserWithHeadlessMode(){
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless=new");
-
-        WebDriver driver = new ChromeDriver(chromeOptions);
+        Browser.openBrowser("chrome");
         driver.get("https://www.selenium.dev/");
         Assert.assertEquals(driver.getTitle(),"Selenium");
         driver.quit();
