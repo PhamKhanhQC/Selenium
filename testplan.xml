@@ -1,7 +1,0 @@
-<suite name = "TVN Test Suite">
-    <test name = "herokuApp">
-        <package>
-            <package name = "herokuApp"/>
-        </package>
-    </test>
-</suite>
